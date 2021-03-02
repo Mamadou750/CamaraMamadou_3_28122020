@@ -7,14 +7,13 @@ footer {
   flex-wrap: wrap;
 }
 
-.nav {
+nav {
   width: 100%;
-  flex-direction: column;
   position: relative;
 }
 
 .logo {
-  width: 375px;
+  width: 100%;
 }
 
 input {
@@ -72,6 +71,11 @@ input {
   object-fit: cover;
 }
 
+.fonctionnement {
+  width: 100%;
+  display: flex;
+}
+
 .fonction {
   padding-top: 20px;
   padding-left: 10px;
@@ -91,6 +95,8 @@ input {
 }
 
 figure {
+  display:flex
+  flex-direction: column;
   position: relative;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -98,18 +104,25 @@ figure {
 }
 
 figcaption {
+  padding-left: 10px;
   background-color: white;
-  border
+  height: 80px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 .restaurant {
   background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .fa-heart {
   position: absolute;
   top: 190px;
   left: 265px;
+  font-size:30px
 }
 
 h3 {
@@ -125,4 +138,52 @@ footer {
 .contenu-foot {
   list-style: none;
   margin: 0;
+}
+
+@media screen and (min-width: 575px) {
+  .presentation {
+    flex-direction: column;
+  }
+
+  .titre-fonction {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .fonctionnement {
+    justify-content: center;
+  }
+
+  .titre-restaurant {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .photo-resto {
+    width: 280px;
+  }
+
+  .fa-heart {
+    position: absolute;
+    top: 190px;
+    left: 215px;
+    font-size:38px
+  }
+
+  .lien-foot {
+    display: inline;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .photo-resto {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .photo-resto {
+    width: 580px;
+  }
 }
