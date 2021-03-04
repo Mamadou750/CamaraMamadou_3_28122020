@@ -40,7 +40,7 @@ input {
   width: 100%;
   height: 230px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-content: space-around;
   background-color: #f2f2f2;
@@ -61,6 +61,7 @@ input {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 25px;
   height: 40px;
+  padding-bottom: 40px;
 }
 
 .photo-resto {
@@ -111,6 +112,10 @@ figcaption {
   border-bottom-left-radius: 25px;
 }
 
+.baniere-resto {
+  width: 100%;
+}
+
 .restaurant {
   background-color: #f2f2f2;
   display: flex;
@@ -123,6 +128,16 @@ figcaption {
   top: 190px;
   left: 265px;
   font-size:30px
+}
+
+.titre-fonction {
+  width: 100%;
+  padding-left: 40px;
+}
+
+.titre-restaurant {
+  width: 100%;
+  padding-left: 40px;
 }
 
 h3 {
@@ -173,6 +188,7 @@ footer {
   .lien-foot {
     display: inline;
     margin-left: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -182,8 +198,19 @@ footer {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .photo-resto {
     width: 580px;
+  }
+
+  .fonction {
+    display: inline;
+    margin-left: 120px;
+    margin-bottom: 80px;
+  }
+
+  .fa-heart {
+    top: 190px;
+    left: 470px;
   }
 }
