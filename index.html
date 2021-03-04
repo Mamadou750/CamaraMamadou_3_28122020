@@ -8,8 +8,9 @@
 
 	<title>ohmyfood.fr</title>
 
-	<link rel="stylesheet"  href="style.css" >
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" >
+	<link rel="stylesheet"  href="style.css" >
 
 	
 </head>
@@ -22,13 +23,13 @@
 
 	</nav>
 
-	<section class="presentation">
+	<header class="presentation">
 
-		<h2 class="titre-pre"> Réservez le menu qui </br> vous convient </h2>
+		<h1 class="titre-pre"> Réservez le menu qui </br> vous convient </h1>
 		<p class="texte-pre"> decouvrez des restaurant d'exception, </br> séléctionné par nos soins.</p>
-		<button class="bt-explorer"> Explorer nos restaurant </button>
+		<a href="#restaurants" class="bt-explorer"> Explorer nos restaurants </a>
 
-	</section>
+		</header>
 
 	<section class="fonctionnement">
 
@@ -47,7 +48,7 @@
 
 	</section>
 
-	<article class="restaurant">
+	<article id="restaurants" class="restaurants">
 		<h2 class="titre-restaurant">Restaurant</h2>
 		<figure>
 			<a href="vues/menu-la-pallete-du-gout.html"><img class="photo-resto" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""></a>
@@ -88,20 +89,20 @@
 	</article>
 
 	<footer>
-		<section >
-			<h3 >ohmyfood</h3>
-			<ul class="contenu-foot">
-				<li class="lien-foot"> 
-					<i class="fas fa-utensils"></i>
-					<a  href="#"> Proposez un restaurant </a> 
-				</li>
-				<li class="lien-foot"> 
-					<a  href="#"> Devenir partenaire</a>  
-				</li>
-				<li class="lien-foot"> <a  href="#" > Mention légales</a>  </li>
-				<li class="lien-foot"> <a  href="#" > Contact </a>  </li>
-			</ul>
-		</section>
+		
+		<h3 >ohmyfood</h3>
+		<ul class="contenu-foot">
+			<li class="lien-foot"> 
+				<i class="fas fa-utensils"></i>
+				<a  href="#"> Proposez un restaurant </a> 
+			</li>
+			<li class="lien-foot"> 
+				<a  href="#"> Devenir partenaire</a>  
+			</li>
+			<li class="lien-foot"> <a  href="#" > Mention légales</a>  </li>
+			<li class="lien-foot"> <a  href="#" > Contact </a>  </li>
+		</ul>
+		
 	</footer>
 
 </body>

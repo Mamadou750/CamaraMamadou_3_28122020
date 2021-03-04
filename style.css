@@ -60,8 +60,9 @@ input {
   background-color: #1E90FF;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 25px;
-  height: 40px;
-  padding-bottom: 40px;
+  text-align: center;
+  width: 210px;
+  height: 25px;
 }
 
 .photo-resto {
@@ -116,7 +117,7 @@ figcaption {
   width: 100%;
 }
 
-.restaurant {
+.restaurants {
   background-color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
