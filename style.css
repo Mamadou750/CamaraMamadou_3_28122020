@@ -1,0 +1,216 @@
+body,
+section,
+article,
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  background-color: #D3D3D3;
+}
+
+.fa-map-marker-alt {
+  position: absolute;
+  left: 125px;
+  top: 92px;
+  color: black;
+}
+
+.titre-pre {
+  text-align: center;
+}
+
+.presentation {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.texte-pre {
+  text-align: center;
+}
+
+.titre-pre {
+  text-align: center;
+}
+
+.bt-explorer {
+  color: white;
+  border: none;
+  background-color: #1E90FF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
+  height: 40px;
+  padding-bottom: 40px;
+}
+
+.photo-resto {
+  width: 310px;
+  height: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
+}
+
+.fonctionnement {
+  width: 100%;
+  display: flex;
+}
+
+.fonction {
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  width: 280px;
+  height: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f2f2f2;
+}
+
+.fa-mobile-alt,
+.fa-list,
+.fa-store {
+  padding-right: 20px;
+  color: #696969;
+}
+
+figure {
+  display:flex
+  flex-direction: column;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid black;
+}
+
+figcaption {
+  padding-left: 10px;
+  background-color: white;
+  height: 80px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.baniere-resto {
+  width: 100%;
+}
+
+.restaurant {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 190px;
+  left: 265px;
+  font-size:30px
+}
+
+.titre-fonction {
+  width: 100%;
+  padding-left: 40px;
+}
+
+.titre-restaurant {
+  width: 100%;
+  padding-left: 40px;
+}
+
+h3 {
+  width: 100%;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  flex-direction: column;
+}
+
+.contenu-foot {
+  list-style: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 575px) {
+  .presentation {
+    flex-direction: column;
+  }
+
+  .titre-fonction {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .fonctionnement {
+    justify-content: center;
+  }
+
+  .titre-restaurant {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .photo-resto {
+    width: 280px;
+  }
+
+  .fa-heart {
+    position: absolute;
+    top: 190px;
+    left: 215px;
+    font-size:38px
+  }
+
+  .lien-foot {
+    display: inline;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .photo-resto {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .photo-resto {
+    width: 580px;
+  }
+
+  .fonction {
+    display: inline;
+    margin-left: 120px;
+    margin-bottom: 80px;
+  }
+
+  .fa-heart {
+    top: 190px;
+    left: 470px;
+  }
+}
