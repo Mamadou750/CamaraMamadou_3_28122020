@@ -2,14 +2,84 @@ body,
 section,
 article,
 footer {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+footer {
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  
+}
+
+.fonctionnement {
+  display: flex;
+  width: 100%;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 230px;
+  align-content: space-around;
+  background-color: #f2f2f2;
 }
 
 nav {
   width: 100%;
   position: relative;
+}
+
+figure {
+  display:flex
+  flex-direction: column;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid black;
+}
+
+figcaption {
+  height: 80px;
+  padding-left: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: white;
+}
+
+.photo-resto {
+  width: 310px;
+  height: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
+}
+
+.fonction {
+  width: 280px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f2f2f2;
+}
+
+.contenu-foot {
+  margin: 0;
+  list-style: none;
 }
 
 .logo {
@@ -19,9 +89,9 @@ nav {
 input {
   width: 100%;
   height: 50px;
-  text-align: center;
   border-left: none;
   border-right: none;
+  text-align: center;
   background-color: #D3D3D3;
 }
 
@@ -36,16 +106,6 @@ input {
   text-align: center;
 }
 
-.presentation {
-  width: 100%;
-  height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-around;
-  background-color: #f2f2f2;
-}
-
 .texte-pre {
   text-align: center;
 }
@@ -55,38 +115,14 @@ input {
 }
 
 .bt-explorer {
-  color: white;
-  border: none;
-  background-color: #1E90FF;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 25px;
-  text-align: center;
   width: 210px;
   height: 25px;
-}
-
-.photo-resto {
-  width: 310px;
-  height: 150px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  object-fit: cover;
-}
-
-.fonctionnement {
-  width: 100%;
-  display: flex;
-}
-
-.fonction {
-  padding-top: 20px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  width: 280px;
-  height: 40px;
+  border: none;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #f2f2f2;
+  text-align: center;
+  color: white;
+  background-color: #1E90FF;
 }
 
 .fa-mobile-alt,
@@ -96,32 +132,8 @@ input {
   color: #696969;
 }
 
-figure {
-  display:flex
-  flex-direction: column;
-  position: relative;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 1px solid black;
-}
-
-figcaption {
-  padding-left: 10px;
-  background-color: white;
-  height: 80px;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
 .baniere-resto {
   width: 100%;
-}
-
-.restaurants {
-  background-color: #f2f2f2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .fa-heart {
@@ -143,17 +155,6 @@ figcaption {
 
 h3 {
   width: 100%;
-}
-
-footer {
-  color: white;
-  background-color: black;
-  flex-direction: column;
-}
-
-.contenu-foot {
-  list-style: none;
-  margin: 0;
 }
 
 @media screen and (min-width: 575px) {
@@ -187,9 +188,9 @@ footer {
   }
 
   .lien-foot {
-    display: inline;
     margin-left: 40px;
     margin-bottom: 40px;
+    display: inline; 
   }
 }
 
