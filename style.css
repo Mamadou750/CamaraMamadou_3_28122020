@@ -26,6 +26,15 @@ footer {
   background-color: #f2f2f2;
 }
 
+.menu {
+  align-items: flex-start;
+  height: 1500px;
+  margin-top: -50px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #f2f2f2;
+}
+
 .presentation {
   display: flex;
   flex-direction: column;
@@ -77,12 +86,32 @@ figcaption {
   background-color: #f2f2f2;
 }
 
+.conteneur-list {
+  width: 100%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.contenu-menu {
+  width: 340px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+}
+
 .contenu-foot {
   margin: 0;
   list-style: none;
 }
 
 .logo {
+  width: 100%;
+}
+
+.baniere {
   width: 100%;
 }
 
@@ -114,9 +143,11 @@ input {
   text-align: center;
 }
 
-.bt-explorer {
+.bt-explorer,
+.bt-commander{
   width: 210px;
   height: 25px;
+  margin-left: 65px;
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -130,10 +161,6 @@ input {
 .fa-store {
   padding-right: 20px;
   color: #696969;
-}
-
-.baniere-resto {
-  width: 100%;
 }
 
 .fa-heart {
@@ -155,7 +182,20 @@ input {
 
 h3 {
   width: 100%;
+  margin-left: 15px;
+  margin-top: 10px;
 }
+
+h2 {
+  width: 100%;
+  margin-left: 15px;
+}
+
+p,
+b {
+  margin-left: 15px;
+}
+
 
 @media screen and (min-width: 575px) {
   .presentation {
