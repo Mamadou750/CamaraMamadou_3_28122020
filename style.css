@@ -16,6 +16,7 @@ footer {
 
 .fonctionnement {
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -50,8 +51,10 @@ footer {
 }
 
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  position: relative;
 }
 
 figure {
@@ -72,22 +75,25 @@ figcaption {
 }
 
 .photo-resto {
-  width: 310px;
-  height: 150px;
+  width: 335px;
+  height: 175px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
 }
 
 .fonction {
-  width: 280px;
-  height: 40px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 10px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  margin-right: 25px;
+  margin-top: 25px;
+  width: 315px;
+  height: 60px;
+  box-shadow: 0 0px 15px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
 }
 
 .conteneur-list {
@@ -112,7 +118,8 @@ figcaption {
 }
 
 .logo {
-  width: 100%;
+  width: 196;
+  height: 34px;
 }
 
 .baniere {
@@ -120,20 +127,30 @@ figcaption {
   height: 300px;
 }
 
-input {
+.search__form__text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
   width: 100%;
-  height: 50px;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-  background-color: #D3D3D3;
+  height: 20px;
 }
 
-.fa-map-marker-alt {
-  position: absolute;
-  left: 125px;
-  top: 92px;
-  color: black;
+.fa-map-marker-alt:before {
+  content: "\f3c5";
+}
+
+.numero-list {
+  position: relative;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  border-radius: 100%;
+  color: white;
+  width: 25px;
+  height: 25px;
 }
 
 .titre-pre {
@@ -201,6 +218,17 @@ b {
   margin-left: 15px;
 }
 
+.search__form {
+  background-color: #e5e5e5;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.search__form__icon {
+    margin-right: 10px;
+}
 
 @media screen and (min-width: 575px) {
   .presentation {
