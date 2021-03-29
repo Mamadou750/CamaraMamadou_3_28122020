@@ -8,6 +8,7 @@
     opacity: 1;
   }
 }
+
 body,
 section,
 article,
@@ -26,15 +27,20 @@ footer {
   background-color: black; 
 }
 
+h4 {
+  margin-left: 40px;
+  text-align: center;
+}
+
+footer li {
+  align-self: center;
+  line-height: 1.6rem;
+}
+
 .contenu-foot {
   margin-left: 0;
   padding-left: 15px;
   list-style: none;
-}
-
-footer ul li {
-  align-self: center;
-  line-height: 1.6rem;
 }
 
 .lien-foot {
@@ -42,10 +48,6 @@ footer ul li {
   margin-bottom: 20px;
 }
 
-h4 {
-  margin-left: 40px;
-  text-align: center;
-}
 
 .fa-utensils,
 .fa-hands-helping {
@@ -224,6 +226,7 @@ figure:hover {
 .fa-heart:hover {
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -245,16 +248,75 @@ figure:hover {
   height: 1700px;
 }
 
-.contenu-menu{
+.contenu-menu {
+  display: flex;
   position: relative;
-  width: 340px;
-  height: 90px;
-  margin-left: 15px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
   background-color: white;
+  box-shadow: 0 0px 15px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  margin: 15px 15px 15px 0;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+      "text1 ."
+      "text2 price";
+  flex-wrap: nowrap;
+  padding: 0 10px;
+}
+
+.contenu-menu p {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.contenu-menu h3 {
+  grid-area: text1;
+  margin: 15px 0 5px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.contenu-menu p {
+  grid-area: text2;
+  margin: 0 0 15px 0;
+}
+.contenu-menu b {
+  grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 15px 15px 0;
+  font-weight: bold;
+}
+
+.checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 12px 12px 0;
+  color: white;
+  width: 0;
+  right: 0;
+  overflow: hidden;
+  transition: width 400ms ease-in-out;
+}
+
+.contenu-menu:hover .checkmark {
+  width: 75px;
+  height: 89px;
+  top: -40px;
+}
+
+.contenu-menu:hover .checkmark > .fa-check-circle {
+  opacity: 1;
+  animation: rotation 500ms ease-in-out;
+}
+
+.entree-1 {
+  animation: upward 500ms ease-in-out both;
 }
 
 .entree-1 {
@@ -270,6 +332,9 @@ figure:hover {
   animation: upward 500ms 0.5s ease-in-out both;
 }
 
+.plat-1 {
+  animation: upward 500ms 0.6s ease-in-out both;
+}
 
 .plat-1 {
   animation: upward 500ms 0.7s ease-in-out both;
@@ -281,12 +346,18 @@ figure:hover {
   animation: upward 500ms 0.9s ease-in-out both;
 }
 
+.dessert {
+  animation: upward 500ms 1s ease-in-out both;
+}
+
 .dessert-1 {
   animation: upward 500ms 1.1s ease-in-out both;
 }
+
 .dessert-2 {
   animation: upward 500ms 1.2s ease-in-out both;
 }
+
 .dessert-3 {
   animation: upward 500ms 1.3s ease-in-out both;
 }
@@ -326,7 +397,7 @@ a {
 
 .heart-bg {
   position: absolute;
-  top: 1px;
+  top: 21px;
   left: 285px;
 }
 
@@ -338,33 +409,33 @@ a {
 }
 
 h1 {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding-top: 20px;
   padding-left: 15px;
   position: relative;
 }
 
 h3 {
-  width: 100%;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin-left: 15px;
   margin-top: 10px;
   font-family: bold;
 }
 
 h2 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
   width: 100%;
   margin-left: 15px;
 }
 
-p,
-b {
-  margin-left: 15px;
-}
-
-b {
-  position: absolute;
-  top: 25px;
-  left: 290px;
-  font-family: bold;
-}
 
 @media screen and (min-width: 575px) {
   .menu {
