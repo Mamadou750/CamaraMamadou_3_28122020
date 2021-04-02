@@ -1,11 +1,11 @@
-@keyframes upward {
+@keyframes list-animation-menu {
   0% {
-    transform: translateY(20px);
-    opacity: 0;
+    opacity: 0%;
+    transform: translateY(50px);
   }
   100% {
-    transform: translateY(0px);
-    opacity: 1;
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
 
@@ -216,23 +216,46 @@ figure:hover {
   transform: scale(1.05);
 }
 
-.fa-heart {
+.restaurants figure figcaption i {
   position: absolute;
-  top: 190px;
-  left: 275px;
-  font-size: 30px;
+  bottom: 35px;
+  right: 15px;
+  transform: scale(1.5);
 }
 
-.fa-heart:hover {
-  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-  cursor: pointer;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.restaurants figure figcaption i.solid {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
-.fa-heart:hover .heart-bg {
-  transform: scale(1);
+.restaurants figure figcaption i.solid:hover {
   opacity: 1;
+  color: transparent;
+  background: linear-gradient(204deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+}
+
+article h1 .fa-heart {
+  transform: scale(1.5);
+}
+
+article h1 i {
+  position: absolute;
+  right: -130px;
+  transform: scale(1.5);
+}
+
+article h1 i.solid {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+article h1 i.solid:hover {
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(204deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
 }
 
 .menu {
@@ -244,122 +267,109 @@ figure:hover {
   background-color: #f2f2f2;
 }
 
+article section ul li div {
+  display: flex;
+  justify-content: space-between;
+}
+
+article section ul li .checkmark i {
+  font-size: 2em;
+  transform: rotate(0deg);
+  transition: transform 0.25s;
+}
+
 .menu-enchanter {
   height: 1700px;
 }
 
-.contenu-menu {
-  display: flex;
-  position: relative;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 0px 15px rgb(0 0 0 / 10%);
-  border-radius: 15px;
-  margin: 15px 15px 15px 0;
-  cursor: pointer;
-
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas:
-      "text1 ."
-      "text2 price";
-  flex-wrap: nowrap;
-  padding: 0 10px;
+article section ul {
+  margin: 15px 15px 15px 15px;
 }
 
-.contenu-menu p {
-  display: block;
+.contenu-menu {
+  position: relative;
+  margin-top: 1em;
+  padding: 1em 1em;
+  overflow: hidden;
+  list-style: none;
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+article section ul li:nth-child(1) {
+  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+article section ul li:nth-child(2) {
+  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+article section ul li:nth-child(3) {
+  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+p,
+h3,
+b {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin-left: 15px;
+  margin-top: 2px;
+  width: fit-content;
 }
-.contenu-menu h3 {
-  grid-area: text1;
-  margin: 15px 0 5px 0;
+
+h3 {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.contenu-menu p {
-  grid-area: text2;
-  margin: 0 0 15px 0;
-}
-.contenu-menu b {
-  grid-area: price;
+
+b {
   display: flex;
   justify-content: flex-end;
-  margin: 0 15px 15px 0;
   font-weight: bold;
+  transform: translateX(0%);
+  transition: transform 0.3s;
 }
 
 .checkmark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  border-radius: 0 12px 12px 0;
-  color: white;
-  width: 0;
+  position: absolute;
   right: 0;
-  overflow: hidden;
-  transition: width 400ms ease-in-out;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #99E2D0;
+  color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s;
 }
 
-.contenu-menu:hover .checkmark {
-  width: 75px;
-  height: 89px;
-  top: -40px;
+article section ul li .checkmark i {
+  font-size: 2em;
+  transform: rotate(0deg);
+  transition: transform 0.25s;
 }
 
-.contenu-menu:hover .checkmark > .fa-check-circle {
-  opacity: 1;
-  animation: rotation 500ms ease-in-out;
+article section ul li:hover p {
+  width: 70%;
 }
 
-.entree-1 {
-  animation: upward 500ms ease-in-out both;
+article section ul li:hover .checkmark {
+  transform: translateX(0%);
 }
 
-.entree-1 {
-  animation: upward 500ms 0.2s ease-in-out both;
-}
-.entree-2 {
-  animation: upward 500ms 0.3s ease-in-out both;
-}
-.entree-3 {
-  animation: upward 500ms 0.4s ease-in-out both;
-}
-.entree__4 {
-  animation: upward 500ms 0.5s ease-in-out both;
+article section ul li:hover .checkmark i {
+  transform: rotate(360deg);
 }
 
-.plat-1 {
-  animation: upward 500ms 0.6s ease-in-out both;
-}
-
-.plat-1 {
-  animation: upward 500ms 0.7s ease-in-out both;
-}
-.plat-2 {
-  animation: upward 500ms 0.8s ease-in-out both;
-}
-.plat-3 {
-  animation: upward 500ms 0.9s ease-in-out both;
-}
-
-.dessert {
-  animation: upward 500ms 1s ease-in-out both;
-}
-
-.dessert-1 {
-  animation: upward 500ms 1.1s ease-in-out both;
-}
-
-.dessert-2 {
-  animation: upward 500ms 1.2s ease-in-out both;
-}
-
-.dessert-3 {
-  animation: upward 500ms 1.3s ease-in-out both;
+article section ul li:hover b {
+  transform: translateX(-200%);
 }
 
 .conteneur-list {
@@ -378,9 +388,7 @@ a {
 }
 
 .baniere {
-  height: auto;
   max-width: 100%;
-  object-fit: contain;
 }
 
 .bt-commander {
@@ -393,12 +401,6 @@ a {
   text-align: center;
   color: white;
   background-color: #1E90FF;
-}
-
-.heart-bg {
-  position: absolute;
-  top: 21px;
-  left: 285px;
 }
 
 .fa-arrow-left {
@@ -417,15 +419,6 @@ h1 {
   position: relative;
 }
 
-h3 {
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-left: 15px;
-  margin-top: 10px;
-  font-family: bold;
-}
 
 h2 {
   margin-bottom: 0;
@@ -486,10 +479,6 @@ h2 {
     font-size:38px
   }
 
-  b {
-    left: 465px;
-  }
-
   .bt-commander,
   .bt-explorer {
     margin-left: 265px;
@@ -504,7 +493,7 @@ h2 {
 
   .heart-bg {
     position: absolute;
-    top: 1px;
+    top: 21px;
     left: 595px;
     font-size: 25px;
   }
@@ -548,17 +537,13 @@ h2 {
     margin-left: 590px;
   }
 
-  b {
-    left: 800px;
-  }
-
   .bt-commander {
     width: 200px;
     margin-left: 580px;
   }
 
   .heart-bg {
-    top: 1px;
+    top: 21px;
     left: 1020px;
     color: black;
   }
