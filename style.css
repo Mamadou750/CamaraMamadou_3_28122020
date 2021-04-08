@@ -67,30 +67,18 @@ nav {
   height: 34px;
 }
 
-.search__form {
-  background-color: #e5e5e5;
-  justify-content: center;
-  align-items: center;
+.form-location {
   width: 100%;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  background-color: #eaeaea;
+  box-shadow: inset 0 3px 3px rgb(0 0 0 / 10%);
 }
 
-.search__form__text {
-  margin-top: 15px;
-  background: none;
-  border: none;
-  width: 100px;
-  height: 20px;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.search__form__icon {
-  margin-left: 125px;
-}
-
-.fa-map-marker-alt:before {
-  content: "\f3c5";
+.form-location i {
+  margin-right: 5px;
+  color: #353535;
 }
 
 .presentation {
@@ -103,26 +91,30 @@ nav {
   background-color: #f2f2f2;
 }
 
-.titre-pre,
-.texte-pre {
-  font-size: 1.5rem;
+.titre-pre {
+  margin: 0;
+  font-size: 1.6rem;
   text-align: center;
 }
 
 .texte-pre {
-  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #777;
 }
 
 .bt-explorer {
-  width: 260px;
-  height: 45px;
-  margin-left: 65px;
+  margin: auto;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  border-radius: 40px;
+  padding: 15px;
+  background: #9356dc;
+  background: linear-gradient(345deg, #9356dc 0%, #ff79da 100%);
   color: white;
-  background-color: #1E90FF;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 30%);
+  text-decoration: none;
+  transition: all ease 0.2s;
 }
 
 .fonctionnement {
@@ -212,6 +204,16 @@ figcaption {
   object-fit: cover;
 }
 
+.restaurants figure figcaption p {
+  margin-left: 12px;
+  padding: 0;
+}
+
+.restaurants figure figcaption h3 {
+  margin-left: 12px;
+  padding: 0;
+}
+
 figure:hover {
   transform: scale(1.05);
 }
@@ -235,23 +237,17 @@ figure:hover {
   -webkit-background-clip: text;
 }
 
-article h1 .fa-heart {
+article header .fa-heart {
   transform: scale(1.5);
 }
 
-article h1 i {
+article header i {
   position: absolute;
-  right: -130px;
+  right: 30px;
   transform: scale(1.5);
 }
 
-article h1 i.solid {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-article h1 i.solid:hover {
+article header i.solid:hover {
   opacity: 1;
   color: transparent;
   background: linear-gradient(204deg, #9356dc 0%, #ff79da 100%);
@@ -315,12 +311,9 @@ article section ul li:nth-child(3) {
 p,
 h3,
 b {
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-left: 15px;
   margin-top: 2px;
-  width: fit-content;
 }
 
 h3 {
@@ -391,16 +384,26 @@ a {
   max-width: 100%;
 }
 
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  padding: 0;
+  width: 100%;
+}
+
 .bt-commander {
-  width: 260px;
-  height: 45px;
-  margin-left: 65px;
+  width: 200px;
+  padding: 14px;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  border-radius: 40px;
+  background: #9356dc;
+  background: linear-gradient(345deg, #9356dc 0%, #ff79da 100%);
   color: white;
-  background-color: #1E90FF;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 30%);
+  text-decoration: none;
+  transition: all ease 0.2s;
 }
 
 .fa-arrow-left {
@@ -468,34 +471,11 @@ h2 {
     width: 280px;
   }
 
-  .search__form__icon {
-    margin-left: 300px;
-  }
-
-  .fa-heart {
-    position: absolute;
-    top: 190px;
-    left: 215px;
-    font-size:38px
-  }
-
-  .bt-commander,
-  .bt-explorer {
-    margin-left: 265px;
-  }
-
   ul {
     flex-direction: column;
     justify-content: center;
     align-self: center;
     padding: 0 0 25px 0;
-  }
-
-  .heart-bg {
-    position: absolute;
-    top: 21px;
-    left: 595px;
-    font-size: 25px;
   }
 }
 
@@ -524,29 +504,6 @@ h2 {
     height: 130px;
   }
 
-  .fa-heart {
-    top: 165px;
-    left: 185px;
-  }
-
-  .bt-explorer {
-    margin-left: 530px;
-  }
-
-  .search__form__icon {
-    margin-left: 590px;
-  }
-
-  .bt-commander {
-    width: 200px;
-    margin-left: 580px;
-  }
-
-  .heart-bg {
-    top: 21px;
-    left: 1020px;
-    color: black;
-  }
 }
 
 @media screen and (min-width: 1440px) {
