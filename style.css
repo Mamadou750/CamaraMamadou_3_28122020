@@ -133,7 +133,7 @@ nav {
   align-items: center;
   background-color: #F2F2F2;
   border-radius: 15px;
-  margin-right: 25px;
+  margin-right: 65px;
   margin-top: 25px;
   width: 315px;
   height: 60px;
@@ -247,6 +247,10 @@ article header i {
   transform: scale(1.5);
 }
 
+article header i.solid {
+  opacity: 0;
+}
+
 article header i.solid:hover {
   opacity: 1;
   color: transparent;
@@ -254,9 +258,16 @@ article header i.solid:hover {
   -webkit-background-clip: text;
 }
 
+article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2em;
+}
+
 .menu {
   align-items: flex-start;
-  height: 1500px;
+  height: auto;
   margin-top: -50px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -272,10 +283,6 @@ article section ul li .checkmark i {
   font-size: 2em;
   transform: rotate(0deg);
   transition: transform 0.25s;
-}
-
-.menu-enchanter {
-  height: 1700px;
 }
 
 article section ul {
@@ -314,6 +321,11 @@ b {
   text-overflow: ellipsis;
   overflow: hidden;
   margin-top: 2px;
+  white-space: nowrap;
+}
+
+p {
+  width: 80%;
 }
 
 h3 {
@@ -435,7 +447,7 @@ h2 {
 }
 
 
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 576px) {
   .menu {
     height: 1650px;
   }
@@ -508,9 +520,9 @@ h2 {
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .photo-resto {
-    width: 280px;
+    width: 230px;
   }
 
 }
