@@ -9,6 +9,26 @@
   }
 }
 
+@keyframes spinner-loading {
+  0% {
+    visibility: visible;
+    z-index: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(360deg);
+  }
+}
+@keyframes page-content-appear {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 body,
 section,
 article,
@@ -52,6 +72,25 @@ footer li {
 .fa-utensils,
 .fa-hands-helping {
   margin-right: -20px;
+}
+
+.spinner-div {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: calc( 50% - 24px);
+}
+
+.fa-spinner {
+  visibility: hidden;
+  font-size: 300%;
+  animation: spinner-loading 1.5s 2;
+  color: #9356DC;
+}
+
+.page-content {
+  visibility: visible;
+  animation: page-content-appear 3s;
 }
 
 nav {
@@ -442,7 +481,6 @@ h1 {
   position: relative;
 }
 
-
 h2 {
   margin-bottom: 0;
   width: 100%;
@@ -451,7 +489,6 @@ h2 {
   font-weight: lighter;
   text-transform: uppercase;
 }
-
 
 @media screen and (min-width: 576px) {
   .menu {
