@@ -9,6 +9,26 @@
   }
 }
 
+@keyframes spinner-loading {
+  0% {
+    visibility: visible;
+    z-index: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(360deg);
+  }
+}
+@keyframes page-content-appear {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 body,
 section,
 article,
@@ -54,6 +74,25 @@ footer li {
   margin-right: -20px;
 }
 
+.spinner-div {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: calc( 50% - 24px);
+}
+
+.fa-spinner {
+  visibility: hidden;
+  font-size: 300%;
+  animation: spinner-loading 1.5s 2;
+  color: #9356DC;
+}
+
+.page-content {
+  visibility: visible;
+  animation: page-content-appear 3s;
+}
+
 nav {
   position: relative;
   display: flex;
@@ -91,6 +130,13 @@ nav {
   background-color: #f2f2f2;
 }
 
+article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2em;
+}
+
 .titre-pre {
   margin: 0;
   font-size: 1.6rem;
@@ -98,6 +144,7 @@ nav {
 }
 
 .texte-pre {
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -133,7 +180,7 @@ nav {
   align-items: center;
   background-color: #F2F2F2;
   border-radius: 15px;
-  margin-right: 25px;
+  margin-right: 65px;
   margin-top: 25px;
   width: 315px;
   height: 60px;
@@ -155,16 +202,16 @@ nav {
 }
 
 .numero-list {
-  position: relative;
-  right: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  right: 25px;
+  width: 25px;
+  height: 25px;
   background-color: #9356DC;
   border-radius: 100%;
   color: white;
-  width: 25px;
-  height: 25px;
 }
 
 .restaurants {
@@ -247,6 +294,10 @@ article header i {
   transform: scale(1.5);
 }
 
+article header i.solid {
+  opacity: 0;
+}
+
 article header i.solid:hover {
   opacity: 1;
   color: transparent;
@@ -256,7 +307,7 @@ article header i.solid:hover {
 
 .menu {
   align-items: flex-start;
-  height: 1500px;
+  height: auto;
   margin-top: -50px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -272,10 +323,6 @@ article section ul li .checkmark i {
   font-size: 2em;
   transform: rotate(0deg);
   transition: transform 0.25s;
-}
-
-.menu-enchanter {
-  height: 1700px;
 }
 
 article section ul {
@@ -294,26 +341,36 @@ article section ul {
 }
 
 article section ul li:nth-child(1) {
-  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation: list-animation-menu 0.5s ease-in-out ;
   animation-fill-mode: forwards;
 }
 
 article section ul li:nth-child(2) {
-  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation: list-animation-menu 0.5s ease-in-out 0.5s;
   animation-fill-mode: forwards;
 }
 
 article section ul li:nth-child(3) {
-  animation: list-animation-menu 0.5s ease-in-out 1s;
+  animation: list-animation-menu 0.5s ease-in-out 1,5s;
+  animation-fill-mode: forwards;
+}
+
+article section ul li:nth-child(4) {
+  animation: list-animation-menu 0.5s ease-in-out 2s;
   animation-fill-mode: forwards;
 }
 
 p,
 h3,
 b {
+  margin-top: 2px;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 2px;
+  white-space: nowrap;
+}
+
+p {
+  width: 80%;
 }
 
 h3 {
@@ -330,12 +387,12 @@ b {
 }
 
 .checkmark {
+  display: flex;
+  align-items: center;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  display: flex;
-  align-items: center;
   padding: 1em;
   background-color: #99E2D0;
   color: white;
@@ -417,25 +474,23 @@ a {
 
 h1 {
   margin: 0px;
-  font-weight: bold;
-  font-size: 1.7rem;
   padding-top: 20px;
   padding-left: 15px;
+  font-weight: bold;
+  font-size: 1.7rem;
   position: relative;
 }
 
-
 h2 {
   margin-bottom: 0;
+  width: 100%;
+  margin-left: 15px;
   font-size: 1.2rem;
   font-weight: lighter;
   text-transform: uppercase;
-  width: 100%;
-  margin-left: 15px;
 }
 
-
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 576px) {
   .menu {
     height: 1650px;
   }
@@ -508,9 +563,9 @@ h2 {
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .photo-resto {
-    width: 280px;
+    width: 230px;
   }
 
 }
