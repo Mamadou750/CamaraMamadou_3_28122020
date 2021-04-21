@@ -3,6 +3,7 @@
     opacity: 0%;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 100%;
     transform: translateY(0);
@@ -15,6 +16,7 @@
     z-index: 1;
     transform: rotate(0deg);
   }
+
   100% {
     visibility: visible;
     transform: rotate(360deg);
@@ -24,6 +26,7 @@
   0% {
     visibility: hidden;
   }
+
   100% {
     visibility: hidden;
   }
@@ -44,7 +47,7 @@ footer {
   justify-content: center;
   align-content: center;
   color: white;
-  background-color: black; 
+  background-color: black;
 }
 
 h4 {
@@ -68,7 +71,6 @@ footer li {
   margin-bottom: 20px;
 }
 
-
 .fa-utensils,
 .fa-hands-helping {
   margin-right: -20px;
@@ -78,14 +80,14 @@ footer li {
   position: absolute;
   z-index: -1;
   top: 50%;
-  left: calc( 50% - 24px);
+  left: calc(50% - 24px);
 }
 
 .fa-spinner {
   visibility: hidden;
   font-size: 300%;
   animation: spinner-loading 1.5s 2;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .page-content {
@@ -120,12 +122,18 @@ nav {
   color: #353535;
 }
 
+.form-location .location-input {
+  border: none;
+  width: 113px;
+  background-color: #eaeaea;
+}
+
 .presentation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 290px;
+  height: 220px;
   align-content: space-around;
   background-color: #f2f2f2;
 }
@@ -149,6 +157,7 @@ article header {
   font-weight: 400;
   text-align: center;
   color: #777;
+  white-space: normal;
 }
 
 .bt-explorer {
@@ -172,7 +181,8 @@ article header {
 
 .titre-fonction {
   width: 100%;
-  padding-left: 40px;
+  padding: 1em 0 0 0%;
+  font-weight: bold;
 }
 
 .fonction {
@@ -182,11 +192,16 @@ article header {
   border-radius: 15px;
   margin-right: 65px;
   margin-top: 25px;
-  width: 315px;
+  width: 100%;
   height: 60px;
   box-shadow: 0 0px 15px rgb(0 0 0 / 20%);
   cursor: pointer;
   transition: 200ms ease-in-out;
+}
+
+section ol p {
+  margin-top: 17px;
+  font-weight: 500;
 }
 
 .fa-mobile-alt,
@@ -227,7 +242,6 @@ figure {
   position: relative;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 1px solid black;
 }
 
 figcaption {
@@ -238,9 +252,21 @@ figcaption {
   background-color: white;
 }
 
+.restaurants figure figcaption .nouveaute {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  margin: 0;
+  padding: 5px;
+  background-color: #99E2D0;
+  color: #028867;
+  width: fit-content;
+}
+
 .titre-restaurant {
   width: 100%;
-  padding-left: 40px;
+  padding: 1em 0 0 4%;
+  font-weight: bold;
 }
 
 .photo-resto {
@@ -341,7 +367,7 @@ article section ul {
 }
 
 article section ul li:nth-child(1) {
-  animation: list-animation-menu 0.5s ease-in-out ;
+  animation: list-animation-menu 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -351,12 +377,12 @@ article section ul li:nth-child(2) {
 }
 
 article section ul li:nth-child(3) {
-  animation: list-animation-menu 0.5s ease-in-out 1,5s;
+  animation: list-animation-menu 0.5s ease-in-out 1s;
   animation-fill-mode: forwards;
 }
 
 article section ul li:nth-child(4) {
-  animation: list-animation-menu 0.5s ease-in-out 2s;
+  animation: list-animation-menu 0.5s ease-in-out 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -394,7 +420,7 @@ b {
   top: 0;
   bottom: 0;
   padding: 1em;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: white;
   transform: translateX(100%);
   transition: transform 0.3s;
@@ -465,6 +491,12 @@ a {
   transition: all ease 0.2s;
 }
 
+.bt-commander:hover {
+  transform: scale(1.02);
+  opacity: 85%;
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 50%);
+}
+
 .fa-arrow-left {
   position: absolute;
   top: 1px;
@@ -486,7 +518,8 @@ h2 {
   width: 100%;
   margin-left: 15px;
   font-size: 1.2rem;
-  font-weight: lighter;
+  color: #333;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -521,7 +554,7 @@ h2 {
 
   .titre-restaurant {
     width: 100%;
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   .photo-resto {
@@ -550,6 +583,10 @@ h2 {
   .photo-resto {
     width: 240px;
     height: 125px;
+  }
+
+  .fonction {
+    width: 300px;
   }
 
   ol {
